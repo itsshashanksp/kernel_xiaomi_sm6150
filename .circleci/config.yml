@@ -9,7 +9,7 @@ jobs:
           command: |
             apt update && apt upgrade -y
             apt install bc build-essential bison flex zip gcc clang libc6 curl libstdc++6 git wget libssl-dev zstd lld openjdk-11-jdk llvm openjdk-11-jre -y
-            git clone --recursive https://github.com/ilham153/kernel_xiaomi_sm6150/tree/circleci-project-setup -b ${CIRCLE_BRANCH} --depth=1 sweet
+            git clone --https://github.com/ilham153/kernel_xiaomi_sm6150/tree/circleci-project-setup --depth=1 sweet
             cd sweet
             bash build.sh
 workflows:
